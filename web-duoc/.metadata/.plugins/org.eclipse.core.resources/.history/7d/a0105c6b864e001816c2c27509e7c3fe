@@ -1,0 +1,6 @@
+eclipse.preferences.version=1
+encoding//WebContent/WEB-INF/admin/_header.jsp=UTF-8
+encoding//WebContent/WEB-INF/admin/_menu.jsp=UTF-8
+encoding//WebContent/WEB-INF/admin/createProduct.jsp=UTF-8
+encoding//WebContent/WEB-INF/admin/managerProduct.jsp=UTF-8
+encoding//src/com/filter/CookieFilter.java=UTF-8

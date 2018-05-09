@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+E:\projects\web-duoc\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+4040762941.index
+1882849995.index
+2261216139.index
+1910440761.index
+2649662054.index
+2210366323.index
+2283766856.index

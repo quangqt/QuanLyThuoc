@@ -20,7 +20,7 @@
 						<li><a class="submenu" href="${pageContext.request.contextPath}/ManagerCategory?command=load"><i
 								class="icon-file-alt"></i><span class="hidden-tablet">
 									Quản lý Loại Sản Phẩm</span></a></li>
-						<li><a class="submenu" href="${pageContext.request.contextPath}/managerProduct"><i
+						<li><a class="submenu" href="${pageContext.request.contextPath}/ManagerProduct"><i
 								class="icon-file-alt"></i><span class="hidden-tablet">
 									Quản lý Sản Phẩm</span></a></li>
 					</ul></li>

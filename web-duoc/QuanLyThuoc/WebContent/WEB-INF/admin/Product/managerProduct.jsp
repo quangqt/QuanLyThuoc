@@ -24,14 +24,14 @@
         </script> -->
 </head>
 <body>
-	<jsp:include page="_header.jsp"></jsp:include>
+	<jsp:include page="../_header.jsp"></jsp:include>
 	<!-- start: Header -->
 
 	<div class="container-fluid-full">
 		<div class="row-fluid">
 
 			<!-- start: Main Menu -->
-			<jsp:include page="_menu.jsp"></jsp:include>
+			<jsp:include page="../_menu.jsp"></jsp:include>
 			<!-- end: Main Menu -->
 			<!-- start: Content -->
 			<div id="content" class="span10">
@@ -42,7 +42,7 @@
 						class="icon-angle-right"></i></li>
 					<li><a href="#">Manager Product</a></li>
 				</ul>
-				<p><a href="${pageContext.request.contextPath}/createProduct">Tạo mới Sản Phẩm</a></p>
+				<p><a href="${pageContext.request.contextPath}/ManagerProduct?command=create">Tạo mới Sản Phẩm</a></p>
 				<div class="row-fluid sortable">
 					<div class="box span12">
 						<div class="box-header" data-original-title>
@@ -78,10 +78,10 @@
 										<td class="center">${sp.url }</td>
 										<td class="center"><a class="btn btn-success" href="#">
 												<i class="halflings-icon white zoom-in"></i>
-										</a> <a class="btn btn-info" href="#"> <i
+										</a> <a class="btn btn-info" href="ManagerProduct?command=edit&code=${sp.maSp }"> <i
 												class="halflings-icon white edit"></i>
 										</a> 
-										<a href="deleteProduct?code=${sp.maSp}" class="btn btn-danger" > <i
+										<a href="ManagerProduct?command=delete&code=${sp.maSp}" class="btn btn-danger" > <i
 												class="halflings-icon white trash"></i></a>
 										</td>
 									</tr>
@@ -126,7 +126,7 @@
 	</div>
 	<div class="clearfix"></div>
 
-	<jsp:include page="_footer.jsp"></jsp:include>
+	<jsp:include page="../_footer.jsp"></jsp:include>
 
 </body>
 </html>

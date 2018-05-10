@@ -13,8 +13,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.commons.lang3.StringUtils;
-
 import com.Controller.LoaiSPController;
 import com.Model.LoaiSp;
 import com.Util.MyUtil;
@@ -61,11 +59,11 @@ public class ManagerCategory extends HttpServlet {
 				// TODO Auto-generated catch block
 				request.setAttribute("errorMsg", "thuc  hien cau sql that bai");
 			}
-			dispatcher = this.getServletContext().getRequestDispatcher("/WEB-INF/admin/managerCategory.jsp");
+			dispatcher = this.getServletContext().getRequestDispatcher("/WEB-INF/admin/Category/managerCategory.jsp");
 			dispatcher.forward(request, response);
 			break;
 		case "insert":
-			dispatcher = this.getServletContext().getRequestDispatcher("/WEB-INF/admin/createCategory.jsp");
+			dispatcher = this.getServletContext().getRequestDispatcher("/WEB-INF/admin/Category/createCategory.jsp");
 			dispatcher.forward(request, response);
 			break;
 		case "delete":
@@ -79,7 +77,7 @@ public class ManagerCategory extends HttpServlet {
 				} else {
 					request.setAttribute("error", "Xoa that bai");
 				}
-				dispatcher = this.getServletContext().getRequestDispatcher("/WEB-INF/admin/managerCategory.jsp");
+				dispatcher = this.getServletContext().getRequestDispatcher("/WEB-INF/admin/Category/managerCategory.jsp");
 				dispatcher.forward(request, response);
 
 			} catch (SQLException | ClassNotFoundException e) {
@@ -92,7 +90,7 @@ public class ManagerCategory extends HttpServlet {
 			try {
 				LoaiSp loaiSP = lspc.getLoaiSPbyMaLoai(conn, maLoai);
 				request.setAttribute("category", loaiSP);
-				dispatcher = this.getServletContext().getRequestDispatcher("/WEB-INF/admin/editCategory.jsp");
+				dispatcher = this.getServletContext().getRequestDispatcher("/WEB-INF/admin/Category/editCategory.jsp");
 				dispatcher.forward(request, response);
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
@@ -100,7 +98,7 @@ public class ManagerCategory extends HttpServlet {
 			}
 			break;
 		default:
-			dispatcher = this.getServletContext().getRequestDispatcher("/WEB-INF/admin/managerCategory.jsp");
+			dispatcher = this.getServletContext().getRequestDispatcher("/WEB-INF/admin/Category/managerCategory.jsp");
 			dispatcher.forward(request, response);
 			break;
 		}
@@ -125,7 +123,7 @@ public class ManagerCategory extends HttpServlet {
 			if (checkValidate(request, response)) {
 				lsp.setTenLoai(request.getParameter("tenlsp"));
 				request.setAttribute("category", lsp);
-				RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/WEB-INF/admin/createCategory.jsp");
+				RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/WEB-INF/admin/Category/createCategory.jsp");
 				dispatcher.forward(request, response);
 			} else {
 

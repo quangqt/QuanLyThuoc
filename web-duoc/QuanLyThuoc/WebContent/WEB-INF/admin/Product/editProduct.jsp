@@ -18,21 +18,21 @@
 </script>
 </head>
 <body>
-	<jsp:include page="_header.jsp"></jsp:include>
+	<jsp:include page="../_header.jsp"></jsp:include>
 	<!-- start: Header -->
 
 	<div class="container-fluid-full">
 		<div class="row-fluid">
 
 			<!-- start: Main Menu -->
-			<jsp:include page="_menu.jsp"></jsp:include>
+			<jsp:include page="../_menu.jsp"></jsp:include>
 			<!-- end: Main Menu -->
 			<!-- start: Content -->
 			<div id="content" class="span10">
 				<ul class="breadcrumb">
 					<li><i class="icon-home"></i> <a href="index.html">Quản
 							lý sản phẩm</a> <i class="icon-angle-right"></i></li>
-					<li><i class="icon-edit"></i> <a href="#">Tạo mới sản
+					<li><i class="icon-edit"></i> <a href="#">Chỉnh sửa sản
 							phẩm</a></li>
 				</ul>
 
@@ -57,9 +57,10 @@
 									${error }</div>
 							</div>
 							<form method="post"
-								action="${pageContext.request.contextPath}/createProduct"
+								action="${pageContext.request.contextPath}/ManagerProduct?command=edit"
 								enctype="multipart/form-data" class="form-horizontal">
 								<fieldset>
+									<input type="hidden" name="maSp" value ="${product.maSp }"/>
 									<div class="control-group">
 										<label class="control-label" for="typeahead">Tên Sản
 											Phẩm </label>
@@ -104,7 +105,7 @@
 										<div class="controls">
 											<div class="input-prepend input-append">
 												<span class="add-on">$</span><input size="16" type="text"
-													maxlength="6" name="gia"><span class="add-on">.00</span>
+													maxlength="6" name="gia" value="${product.gia }"><span class="add-on">.00</span>
 											</div>
 										</div>
 									</div>
@@ -114,7 +115,7 @@
 											lượng</label>
 										<div class="controls">
 											<div class="input-append">
-												<input size="16" type="text" name="soluong" maxlength="5"><span
+											<input size="16" type="text" name="soluong" maxlength="5" value="${product.soluong }"><span
 													class="add-on">.00</span>
 											</div>
 										</div>
@@ -125,7 +126,7 @@
 											xứ</label>
 										<div class="controls">
 											<div class="input-append">
-												<input size="16" type="text" name="xuatxu" maxlength="50">
+												<input size="16" type="text" name="xuatxu" value="${product.xuatXu }" maxlength="50">
 											</div>
 										</div>
 									</div>
@@ -182,6 +183,6 @@
 	</div>
 	<div class="clearfix"></div>
 
-	<jsp:include page="_footer.jsp"></jsp:include>
+	<jsp:include page="../_footer.jsp"></jsp:include>
 </body>
 </html>

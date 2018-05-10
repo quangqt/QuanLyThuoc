@@ -9,14 +9,14 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<jsp:include page="_header.jsp"></jsp:include>
+	<jsp:include page="../_header.jsp"></jsp:include>
 	<!-- start: Header -->
 
 	<div class="container-fluid-full">
 		<div class="row-fluid">
 
 			<!-- start: Main Menu -->
-			<jsp:include page="_menu.jsp"></jsp:include>
+			<jsp:include page="../_menu.jsp"></jsp:include>
 			<!-- end: Main Menu -->
 			<!-- start: Content -->
 			<div id="content" class="span10">
@@ -114,7 +114,7 @@
 	</div>
 	<div class="clearfix"></div>
 
-	<jsp:include page="_footer.jsp"></jsp:include>
+	<jsp:include page="../_footer.jsp"></jsp:include>
 
 </body>
 </html>
